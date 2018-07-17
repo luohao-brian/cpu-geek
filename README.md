@@ -7,5 +7,11 @@
 ### false-sharing
 CPU cache line伪共享会导致严重的性能下降, 这个测试程序对比了伪共享带来的下降，可以看出在类似轮询的场景，伪共享会导致数倍的延时增加。
 
-### cputemp
+### cpu-msr-tools/cputemp
 使用MSR获取当前CPU温度
+
+### cpu-msr-tools/cpuhot
+利用MSR获取CPU的当前温度和警告阈值温度
+
+### cpu-msr-tools/showboost
+利用MSR获取cpu的基线频率，运行频率以及turbo频率

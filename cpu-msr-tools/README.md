@@ -12,3 +12,8 @@
 > Temperature Target (23:16)
 > The default thermal throttling or PROCHOT# activation temperature in degree C.
 
+#cpuhot
+利用MSR获取CPU的当前温度和警告阈值温度
+
+#showboost
+利用MSR获取cpu的基线频率，运行频率以及turbo频率
