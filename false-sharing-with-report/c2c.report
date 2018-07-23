@@ -1,0 +1,79 @@
+=================================================
+            Trace Event Information              
+=================================================
+  Total records                     :     504941
+  Locked Load/Store Operations      :     240207
+  Load Operations                   :     240294
+  Loads - uncacheable               :          0
+  Loads - IO                        :          0
+  Loads - Miss                      :          0
+  Loads - no mapping                :          0
+  Load Fill Buffer Hit              :         32
+  Load L1D hit                      :      16509
+  Load L2D hit                      :          1
+  Load LLC hit                      :     223749
+  Load Local HITM                   :     112917
+  Load Remote HITM                  :          0
+  Load Remote HIT                   :          0
+  Load Local DRAM                   :          3
+  Load Remote DRAM                  :          0
+  Load MESI State Exclusive         :          3
+  Load MESI State Shared            :          0
+  Load LLC Misses                   :          3
+  LLC Misses to Local DRAM          :      100.0%
+  LLC Misses to Remote DRAM         :        0.0%
+  LLC Misses to Remote cache (HIT)  :        0.0%
+  LLC Misses to Remote cache (HITM) :        0.0%
+  Store Operations                  :     264647
+  Store - uncacheable               :          0
+  Store - no mapping                :          1
+  Store L1D Hit                     :     264173
+  Store L1D Miss                    :        473
+  No Page Map Rejects               :        576
+  Unable to parse data source       :          0
+
+=================================================
+    Global Shared Cache Line Event Information   
+=================================================
+  Total Shared Cache Lines          :          7
+  Load HITs on shared lines         :     240212
+  Fill Buffer Hits on shared lines  :         11
+  L1D hits on shared lines          :      16486
+  L2D hits on shared lines          :          0
+  LLC hits on shared lines          :     223712
+  Locked Access on shared lines     :     240188
+  Store HITs on shared lines        :     260871
+  Store L1D hits on shared lines    :     260870
+  Total Merged records              :     373788
+
+=================================================
+                 c2c details                     
+=================================================
+  Events                            : cpu/mem-loads,ldlat=30/P
+                                    : cpu/mem-stores/P
+  Cachelines sort on                : Total HITMs
+  Cacheline data grouping           : offset,pid,iaddr
+
+=================================================
+           Shared Data Cache Line Table          
+=================================================
+#
+#                              Total      Tot  ----- LLC Load Hitm -----  ---- Store Reference ----  --- Load Dram ----      LLC    Total  ----- Core Load Hit -----  -- LLC Load Hit --
+# Index           Cacheline  records     Hitm    Total      Lcl      Rmt    Total    L1Hit   L1Miss       Lcl       Rmt  Ld Miss    Loads       FB       L1       L2       Llc       Rmt
+# .....  ..................  .......  .......  .......  .......  .......  .......  .......  .......  ........  ........  .......  .......  .......  .......  .......  ........  ........
+#
+      0      0x55627fdfa000   501058   99.99%   112907   112907        0   260870   260870        0         3         0        3   240188        0    16485        0    110793         0
+
+=================================================
+      Shared Cache Line Distribution Pareto      
+=================================================
+#
+# ----- HITM -----  -- Store Refs --                                      ---------- cycles ----------    Total       cpu                  Shared                        
+#     Rmt      Lcl   L1 Hit  L1 Miss    Off      Pid        Code address  rmt hitm  lcl hitm      load  records       cnt     Symbol       Object       Source:Line  Node
+# .......  .......  .......  .......  .....  .......  ..................  ........  ........  ........  .......  ........  .........  ...........  ................  ....
+#
+  -------------------------------------------------------------
+      0        0   112907   260870        0      0x55627fdfa000
+  -------------------------------------------------------------
+    0.00%    0.36%   50.12%    0.00%   0x20     4160      0x55627fbf8a6d         0      1455      1576   251208         1  [.] func1  false-share  false-share.c:42   0
+    0.00%   99.64%   49.88%    0.00%   0x28     4160      0x55627fbf8b6a         0      1668       370   249850         1  [.] func2  false-share  false-share.c:60   0
