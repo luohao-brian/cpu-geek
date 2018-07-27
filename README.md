@@ -18,3 +18,6 @@ linux 4.14， CPU i7-4790上测试代码和测试结果，极端情况下，性�
 
 ### cpu-msr-tools/showboost
 利用MSR获取cpu的基线频率，运行频率以及turbo频率
+
+### pmu-counters
+利用CPUID获取PMU的counters
