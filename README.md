@@ -9,3 +9,6 @@ CPU cache line伪共享会导致严重的性能下降, 这个测试程序对比�
 
 ### cputemp
 使用MSR获取当前CPU温度
+
+### cpu-ipc-extreme
+使用nop循环实现流水管线利用率接近理论最大化
