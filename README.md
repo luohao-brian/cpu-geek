@@ -24,3 +24,6 @@ linux 4.14， CPU i7-4790上测试代码和测试结果，极端情况下，性�
 
 ### cpu-ipc-extreme
 使用nop循环实现流水管线利用率接近理论最大化
+
+### cache-miss
+CPU cache miss性能对比验证
